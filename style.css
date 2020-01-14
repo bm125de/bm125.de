@@ -182,7 +182,7 @@ header .background {
 }
 
 
-@media screen and (max-width: 1024px) and (min-width: 480px){
+@media screen and (max-width: 1024px) and (min-width: 48px){
 header section {
     width: 50%;
 }
@@ -208,7 +208,7 @@ header section {
 } */
 }
 }
-@media screen and (max-width: 480px){
+/* @media screen and (max-width: 480px){
     .feather h1 {
     font-size: 30px;
     text-align: center;
@@ -232,4 +232,4 @@ header section {
 .feather a {
     left: 10%;
 }
-}
+} */
