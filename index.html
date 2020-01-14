@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section>
+            <p class="typer"><i class="material-icons-sharp">mms</i></p>
+            <div class="img" style="background-image:url(https://img.technews.tw/wp-content/uploads/2019/03/22152418/47383992722_575b1d6e58_k1.jpg);">
+            </div>
+            <h1>開源GIT.子網域現在已開放！</h1>
+            <p>所有的專案都會開源讓大家去載使用。</p>
+            <a href="https://git.bm125.de/">立即了解 <i class="material-icons-sharp">arrow_forward</i></a>
+        </section>
+    </header>
+    <nav class="d-flex">
+        <div class="title">
+            <h1>/BM125/</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="">專案</a></li>
+                <li><a href="">新聞</a></li>
+                <li><a href="">聯絡</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="feather">
+            <div>
+                <i class="material-icons-sharp icon"> thumbs_up_down </i>
+                <h1>媒體並不是、<br>社交的唯一方式。</h1>
+            </div>
+            <a href="#type" class="sliding-link">那會是什麼呢？ <i class="material-icons"> zoom_in </i></a>
+        </section>
+        <section class="type" id="type">
+            <h1><i class="material-icons history"> history </i> 歷史專案</h1>
+            <div class="d-flex flexbox">
+                <div class="block type-1" style="background-image:url(https://www.bungie.net/7/ca/destiny/bgs/season_of_dawn/s9_screenshots_4.jpg);">
+                    <div class="type-1h"></div>
+                </div>
+                <div class="block type-2" style="background-image: url(https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);">
+                    <div class="type-2h"></div>   
+                </div>
+                <div class="block type-3" style="background-image: url(https://pbs.twimg.com/media/EOMp0pIUUAAXDfd?format=png&name=4096x4096);">
+                    <div class="type-3h"></div>
+                </div>
+            </div>
+            <div class="devbox">
+                <div class="block type-1">
+                    <i class="material-icons-sharp icons">cast_connected</i>
+                    <h1>串流</h1>    
+                </div>
+                <div class="block type-2">
+                    <i class="material-icons-sharp icons">gamepad</i>
+                    <h1>娛樂</h1>    
+                </div>
+                <div class="block type-3">
+                        <i class="material-icons-sharp icons">headset_mic</i>
+                        <h1>音樂</h1>   
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        $(document).ready(function(){
+        $(".type-1").hover(function(){
+            $(".type-1h").css("background-color", "rgba(0,0,0,0)");
+            }, function(){
+            $(".type-1h").css("background-color", "black");
+        });
+        $(".type-2").hover(function(){
+            $(".type-2h").css("background-color", "rgba(0,0,0,0)");
+            }, function(){
+            $(".type-2h").css("background-color", "black");
+        });
+        $(".type-3").hover(function(){
+            $(".type-3h").css("background-color", "rgba(0,0,0,0)");
+            }, function(){
+            $(".type-3h").css("background-color", "black");
+        });
+        $(".sliding-link").click(function(e) {
+            e.preventDefault();
+            var aid = $(this).attr("href");
+            $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        });
+
+        });
+        </script>
+</body>
+</html>
