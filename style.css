@@ -208,9 +208,12 @@ header section {
     margin: 40px 0;
 }
 .type .flexbox {
+    padding: 0 40px;
     flex-direction: column;
 }
 .type .devbox {
+    padding: 0 40px;
+    margin-top: -45vh;
     flex-direction: column;
 }
 /* .type div {
