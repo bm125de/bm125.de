@@ -4,6 +4,11 @@
     padding: 0;
     font-family: 'Noto Sans TC', sans-serif;
 }
+h1 {
+    font-weight: normal !important;
+    font-size: 48px;
+    text-transform: uppercase;
+}
 ::selection {
     background-color: white;
     color: black;
@@ -119,31 +124,98 @@ main .block {
     color: white;
     background-color: black;
     font-weight: normal !important;
+    border-bottom: solid white 1px;
+    position: relative;
 
 }
-main .block h1 {
-    margin-top: 30px;
-    font-weight: normal !important;
-    font-size: 48px;
+main .block .img {
+    
 }
-main .block span {
+main.block .filter {
+    background: rgb(0,0,0);
+background: linear-gradient(-90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 100%);
+}
+main h1 {
+    margin-top: 30px;
+}
+main span {
     font-size: 16px;
     padding-bottom: 8px;
     border-bottom: solid 1px white;
+}
+main p {
+    font-size: 20px;
+    margin-top: 30px;
 }
 main .sec1 {
     background-image: url(sec1.png);
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 main .sec1 .filter {
     background: rgb(0,0,0);
     background: linear-gradient(-90deg, rgba(0,0,0,.9) 22%, rgba(255,255,255,0) 69%);
     height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
+}
+main .sec1 .msg {
+    /* text-align: right; */
+    /* backdrop-filter: blur(10px); */
+    box-sizing: border-box;
+    padding: 30px;
+    color: white;
+    /* background-color: rgb(255,255,255,.05); */
+    z-index: 100;
+    position: absolute;
+    top: 4%;
+    right: 120px;
+    margin: 100px;
+    height: 500px;
+    width: 480px;
+    /* border: white solid 1px; */
+}
+
+
+.buttom {
+    font-weight: bold;
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-flex;
+    width: auto;
+    position: relative;
+    padding: 8px 14px;
+    background-color: rgba(30, 170, 189, 0.7);
+    color: rgb(255,255,255);
+    border: rgb(255,255,255, .5) solid 1px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.buttom:hover {
+    transition: .25s;
+    /* color: black; */
+    background-color: rgba(30, 170, 189, 1);
+}
+.buttom:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: white 0px solid;
+}
+.buttom:hover:after {
+    transition: .25s;
+    top: -8px;
+    right: -8px;
+    left: -8px;
+    bottom: -8px;
+    border: white 1px solid;
 }
 
 
