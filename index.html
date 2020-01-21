@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="loading"><div class="loader">Loading...</div></div>
     <nav>
         <div class="img"><img src="logo.png"></div>
         <a class="material-icons-sharp menu" onclick="menuTure()" href="javascript:void(0)">menu</a>
@@ -25,38 +26,58 @@
             <p>contact us</p>
         </div>
     </nav>
-    <header>
-        <div class="filter"></div>
-        <div class="title">
-            <h1>WE create everything<br>together.  </h1>
-            <a href="" class="button">PLAY NOW</a>
-        </div>
-    </header>
-    <main>
-        <section class="block" id="nav">
-            <div class="img">
-                <div class="bg"></div>
-                <div class="filter"></div>
-            </div>
-            <div class="msg">
-                <span>event</span>
-                <h1>Join the event for everyone</h1>
-                <p>The event is for everyone, there is no need to join the membership, as long as you are there, we are there.</p>    
-            </div>
-                <a href="" class="more">Read more</a>
-        </section>
-        <section class="sec1">
-            <div class="msg">
-                <span>TEAM</span>
-                <h1>Join your favorite team</h1>
-                <p>Join your favorite team now and create great memories with the team members in the game!</p>
-                <div><a href="" class="buttom">Send invite</a></div>
-            </div>
+    <div class="home">
+        <header>
             <div class="filter"></div>
-        </section>
-    </main>
+            <div class="title">
+                <h1>WE create everything<br>together.  </h1>
+                <a href="javascript:void(0)" class="button" onclick="startLoading()">PLAY NOW</a>
+            </div>
+        </header>
+        <main>
+            <section class="block" id="nav">
+                <div class="img">
+                    <div class="bg"></div>
+                    <div class="filter"></div>
+                </div>
+                <div class="msg">
+                    <span>event</span>
+                    <h1>Join the event for everyone</h1>
+                    <p>The event is for everyone, there is no need to join the membership, as long as you are there, we are there.</p>    
+                </div>
+                    <a href="" class="more" ><spam class="material-icons-sharp more_mis">arrow_forward</spam><p class="more-txt">Read more</p></a>
+            </section>
+            <section class="sec1">
+                <div class="msg">
+                    <span>TEAM</span>
+                    <h1>Join your favorite team</h1>
+                    <p>Join your favorite team now and create great memories with the team members in the game!</p>
+                    <div><a href="" class="buttom">Send invite</a></div>
+                </div>
+                <div class="filter"></div>
+            </section>
+        </main>
+    
+    </div>
     <script>
-        $(window).scroll(function() {
+        loading()
+        async function loading(){
+            $('nav').css('opacity','0');
+            $('.loading').css('display','block');
+            await sleep(10);
+            $('.loading').css('opacity','100%');
+            await sleep(1000);
+            $('nav').css('opacity','100%');
+            $('.loading').css('opacity','0');
+            await sleep(1000);
+            $('.loading').css('display','none');
+        }
+        async function startLoading(){
+            $('nav').css('opacity','0');
+            loading();
+        }
+        $(".more_mis").css('margin-left','50px').css('opacity','0');
+        $(window).scroll(async function() {
         var hT = $('#nav').offset().top,
             hH = $('#nav').outerHeight(),
             wH = $(window).height(),
@@ -65,9 +86,12 @@
         if (wS > (hT+hH-wH)){
             $('nav').css('background-color','rgba(0,0,0,.5)');
             $('nav').css('backdrop-filter','blur(10px)');
+            await sleep(10);
+            $('nav').css('border-bottom','rgba(255,255,255,.3) 1px solid');
         }else {
             $('nav').css('background-color','rgba(0,0,0,0)');
             $('nav').css('backdrop-filter','blur(0)');
+            $('nav').css('border-bottom','rgba(255,255,255,0) 1px solid');
         }
         });
         
@@ -99,6 +123,23 @@
             await sleep(100);
             $('#menuitem').hide();
         }
+        $(".more").mouseover(
+            function more_txt(){
+                $(".more-txt").css('opacity','0').css('margin-right','20px');
+                $(".more_mis").css('margin-left','135px').css('opacity','1');
+            }
+        ).mouseout(
+            function more_Out() {
+                $(".more-txt").css('opacity','1').css('margin-right','0');
+                $(".more_mis").css('margin-left','50px').css('opacity','0');
+            }
+        );
+        async function changepage() {
+
+            await sleep(1000);
+            $('header').hide();
+            $('main').hide();
+        };
     </script>
 </body>
 </html>
