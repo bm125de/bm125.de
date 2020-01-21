@@ -62,12 +62,14 @@
     <script>
         loading()
         async function loading(){
+            $('.loader,.loader:after').css('height','50px').css('width','50px');
             $('nav').css('opacity','0');
             $('.loading').css('display','block');
             await sleep(10);
             $('.loading').css('opacity','100%');
             await sleep(1000);
-            $('nav').css('opacity','100%');
+            $('.loader,.loader:after').css('height','70px').css('width','70px');
+            $('nav').css('opacity','100');
             $('.loading').css('opacity','0');
             await sleep(1000);
             $('.loading').css('display','none');
