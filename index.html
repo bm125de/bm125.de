@@ -1,99 +1,147 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <section>
-            <p class="typer"><i class="material-icons-sharp">mms</i></p>
-            <div class="img" style="background-image:url(https://img.technews.tw/wp-content/uploads/2019/03/22152418/47383992722_575b1d6e58_k1.jpg);">
-            </div>
-            <h1>開源GIT.子網域現在已開放！</h1>
-            <p>所有的專案都會開源讓大家去載使用。</p>
-            <a href="https://git.bm125.de/">立即了解 <i class="material-icons-sharp">arrow_forward</i></a>
-        </section>
-    </header>
-    <nav class="d-flex">
-        <div class="title">
-            <h1>/BM125/</h1>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="">專案</a></li>
-                <li><a href="">新聞</a></li>
-                <li><a href="">聯絡</a></li>
-            </ul>
+    <div class="loading"><div class="loader">Loading...</div></div>
+    <nav>
+        <div class="img"><img src="logo.png"></div>
+        <a class="material-icons-sharp menu" onclick="menuTure()" href="javascript:void(0)">menu</a>
+        <div class="item" id="menuitem">
+            <a class="material-icons-sharp" href="javascript:void(0)" onclick="menuFalse()">close</a>
+            <a href="">Home</a>
+            <p>Main Page of this site</p>
+            <a href="">Features</a>
+            <p>More product features</p>
+            <a href="">About</a>
+            <p>Self-introductory history</p>
+            <a href="">coaount</a>
+            <p>contact us</p>
         </div>
     </nav>
-    <main>
-        <section class="feather">
-            <div>
-                <i class="material-icons-sharp icon"> thumbs_up_down </i>
-                <h1>媒體並不是、<br>社交的唯一方式。</h1>
+    <div class="home">
+        <header>
+            <div class="filter"></div>
+            <div class="title">
+                <h1>WE create everything<br>together.  </h1>
+                <a href="javascript:void(0)" class="button" onclick="startLoading()">PLAY NOW</a>
             </div>
-            <a href="#type" class="sliding-link">那會是什麼呢？ <i class="material-icons"> zoom_in </i></a>
-        </section>
-        <section class="type" id="type">
-            <h1><i class="material-icons history"> history </i> 歷史專案</h1>
-            <div class="d-flex flexbox">
-                <div class="block type-1" style="background-image:url(https://www.bungie.net/7/ca/destiny/bgs/season_of_dawn/s9_screenshots_4.jpg);">
-                    <div class="type-1h"></div>
+        </header>
+        <main>
+            <section class="block" id="nav">
+                <div class="img">
+                    <div class="bg"></div>
+                    <div class="filter"></div>
                 </div>
-                <div class="block type-2" style="background-image: url(https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);">
-                    <div class="type-2h"></div>   
+                <div class="msg">
+                    <span>event</span>
+                    <h1>Join the event for everyone</h1>
+                    <p>The event is for everyone, there is no need to join the membership, as long as you are there, we are there.</p>    
                 </div>
-                <div class="block type-3" style="background-image: url(https://pbs.twimg.com/media/EOMp0pIUUAAXDfd?format=png&name=4096x4096);">
-                    <div class="type-3h"></div>
+                    <a href="" class="more" ><spam class="material-icons-sharp more_mis">arrow_forward</spam><p class="more-txt">Read more</p></a>
+            </section>
+            <section class="sec1">
+                <div class="msg">
+                    <span>TEAM</span>
+                    <h1>Join your favorite team</h1>
+                    <p>Join your favorite team now and create great memories with the team members in the game!</p>
+                    <div><a href="" class="buttom">Send invite</a></div>
                 </div>
-            </div>
-            <div class="devbox">
-                <div class="block type-1">
-                    <i class="material-icons-sharp icons">cast_connected</i>
-                    <h1>串流</h1>    
-                </div>
-                <div class="block type-2">
-                    <i class="material-icons-sharp icons">gamepad</i>
-                    <h1>娛樂</h1>    
-                </div>
-                <div class="block type-3">
-                        <i class="material-icons-sharp icons">headset_mic</i>
-                        <h1>音樂</h1>   
-                </div>
-            </div>
-        </section>
-    </main>
+                <div class="filter"></div>
+            </section>
+        </main>
+    
+    </div>
     <script>
-        $(document).ready(function(){
-        $(".type-1").hover(function(){
-            $(".type-1h").css("background-color", "rgba(0,0,0,0)");
-            }, function(){
-            $(".type-1h").css("background-color", "black");
+        loading()
+        async function loading(){
+            $('.loader,.loader:after').css('height','50px').css('width','50px');
+            $('nav').css('opacity','0');
+            $('.loading').css('display','block');
+            await sleep(10);
+            $('.loading').css('opacity','100%');
+            await sleep(1000);
+            $('.loader,.loader:after').css('height','70px').css('width','70px');
+            $('nav').css('opacity','100');
+            $('.loading').css('opacity','0');
+            await sleep(1000);
+            $('.loading').css('display','none');
+        }
+        async function startLoading(){
+            $('nav').css('opacity','0');
+            loading();
+        }
+        $(".more_mis").css('margin-left','50px').css('opacity','0');
+        $(window).scroll(async function() {
+        var hT = $('#nav').offset().top,
+            hH = $('#nav').outerHeight(),
+            wH = $(window).height(),
+            wS = $(this).scrollTop();
+            // console.log((hT-wH) , wS);
+        if (wS > (hT+hH-wH)){
+            $('nav').css('background-color','rgba(0,0,0,.5)');
+            $('nav').css('backdrop-filter','blur(10px)');
+            await sleep(10);
+            $('nav').css('border-bottom','rgba(255,255,255,.3) 1px solid');
+        }else {
+            $('nav').css('background-color','rgba(0,0,0,0)');
+            $('nav').css('backdrop-filter','blur(0)');
+            $('nav').css('border-bottom','rgba(255,255,255,0) 1px solid');
+        }
         });
-        $(".type-2").hover(function(){
-            $(".type-2h").css("background-color", "rgba(0,0,0,0)");
-            }, function(){
-            $(".type-2h").css("background-color", "black");
-        });
-        $(".type-3").hover(function(){
-            $(".type-3h").css("background-color", "rgba(0,0,0,0)");
-            }, function(){
-            $(".type-3h").css("background-color", "black");
-        });
-        $(".sliding-link").click(function(e) {
-            e.preventDefault();
-            var aid = $(this).attr("href");
-            $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        
+        window.addEventListener("resize",e=>{
+            if(window.innerWidth >= 1024){
+                // var menushowup = false;
+                // console.log(menushowup)
+                $('#menuitem').css('opacity','100%');
+                $('#menuitem').show();
+            }else {
+                $('#menuitem').css('opacity','0%');
+                $('#menuitem').hide();
+            }
         });
 
-        });
-        </script>
+        function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        async function menuTure() {
+            console.log(187321);
+            $('#menuitem').show();
+            await sleep(10);
+            $('#menuitem').css('opacity','100%');
+        }
+
+        async function menuFalse() {
+            console.log(187321);
+            $('#menuitem').css('opacity','0%');
+            await sleep(100);
+            $('#menuitem').hide();
+        }
+        $(".more").mouseover(
+            function more_txt(){
+                $(".more-txt").css('opacity','0').css('margin-right','20px');
+                $(".more_mis").css('margin-left','135px').css('opacity','1');
+            }
+        ).mouseout(
+            function more_Out() {
+                $(".more-txt").css('opacity','1').css('margin-right','0');
+                $(".more_mis").css('margin-left','50px').css('opacity','0');
+            }
+        );
+        async function changepage() {
+
+            await sleep(1000);
+            $('header').hide();
+            $('main').hide();
+        };
+    </script>
 </body>
 </html>
