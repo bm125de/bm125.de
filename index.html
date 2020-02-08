@@ -1,148 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,200,300,400,500,600,700,800,900');
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-flow: column;
+        }
+
+        header {
+            display: none;
+            font-size: 100px;
+            color: white;
+            font-weight: 700;
+            margin: 40px 0;
+        }
+
+        .header {
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50vh;
+            background-image: url('5f81dd18f763ad90a71d3f04d17cf88a (2).jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        nav {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            width: 40%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            transition: .25s;
+            color: black;
+            text-decoration: none;
+            padding-right: 20px;
+            margin: 0 6%;
+        }
+        nav .material-icons-sharp {
+            font-size: 50px !important;
+            transition: .25s;
+        }
+        nav a h3 {
+            width: 100%;
+            height: 20px;
+            font-size: 15px;
+            letter-spacing: 5px;
+            margin-top: 5px;
+            margin-left: -20px;
+            transition: .25s;
+            opacity: .0;
+            text-align: center;
+        }
+        /* .title {
+            font-size: 40px;
+        }
+        main {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
+        main a {
+            color: black;
+            text-decoration: none;
+            border-bottom: 4px solid black;
+        } */
+        @media screen and (max-width: 1024px) {
+            nav {
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="loading"><div class="loader">Loading...</div></div>
-    <nav>
-        <div class="img"><img src="logo.png"></div>
-        <a class="material-icons-sharp menu" onclick="menuTure()" href="javascript:void(0)">menu</a>
-        <div class="item" id="menuitem">
-            <a class="material-icons-sharp" href="javascript:void(0)" onclick="menuFalse()">close</a>
-            <a href="">Home</a>
-            <p>Main Page of this site</p>
-            <a href="">Features</a>
-            <p>More product features</p>
-            <a href="">About</a>
-            <p>Self-introductory history</p>
-            <a href="">coaount</a>
-            <p>contact us</p>
-        </div>
-    </nav>
-    <div class="home">
-        <header>
-            <div class="filter"></div>
-            <div class="title">
-                <h1>WE create everything<br>together.  </h1>
-                <a href="javascript:void(0)" class="button" onclick="startLoading()">PLAY NOW</a>
-            </div>
-        </header>
-        <main>
-            <section class="block" id="nav">
-                <div class="img">
-                    <div class="bg"></div>
-                    <div class="filter"></div>
-                </div>
-                <div class="msg">
-                    <span>event</span>
-                    <h1>Join the event for everyone</h1>
-                    <p>The event is for everyone, there is no need to join the membership, as long as you are there, we are there.</p>    
-                </div>
-                    <a href="" class="more" ><spam class="material-icons-sharp more_mis">arrow_forward</spam><p class="more-txt">Read more</p></a>
-            </section>
-            <section class="sec1">
-                <div class="msg">
-                    <span>TEAM</span>
-                    <h1>Join your favorite team</h1>
-                    <p>Join your favorite team now and create great memories with the team members in the game!</p>
-                    <div><a href="" class="buttom">Send invite</a></div>
-                </div>
-                <div class="filter"></div>
-            </section>
-        </main>
-    
+    <div class="header">
+        <header>BLOG</header>
     </div>
-    <script>
-        loading()
-        async function loading(){
-            $('.loader,.loader:after').css('height','50px').css('width','50px');
-            $('nav').css('opacity','0');
-            $('.loading').css('display','block');
-            await sleep(10);
-            $('.loading').css('opacity','100%');
-            await sleep(1000);
-            $('.loader,.loader:after').css('height','70px').css('width','70px');
-            $('nav').css('opacity','100');
-            $('.loading').css('opacity','0');
-            await sleep(1000);
-            $('.loading').css('display','none');
-        }
-        async function startLoading(){
-            $('nav').css('opacity','0');
-            loading();
-        }
-        $(".more_mis").css('margin-left','50px').css('opacity','0');
-        $(window).scroll(async function() {
-        var hT = $('#nav').offset().top,
-            hH = $('#nav').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-            // console.log((hT-wH) , wS);
-        if (wS > (hT+hH-wH)){
-            $('nav').css('background-color','rgba(0,0,0,.5)');
-            $('nav').css('backdrop-filter','blur(10px)');
-            await sleep(10);
-            $('nav').css('border-bottom','rgba(255,255,255,.3) 1px solid');
-        }else {
-            $('nav').css('background-color','rgba(0,0,0,0)');
-            $('nav').css('backdrop-filter','blur(0)');
-            $('nav').css('border-bottom','rgba(255,255,255,0) 1px solid');
-        }
-        });
-        
-        window.addEventListener("resize",e=>{
-            if(window.innerWidth >= 1024){
-                // var menushowup = false;
-                // console.log(menushowup)
-                $('#menuitem').css('opacity','100%');
-                $('#menuitem').show();
-            }else {
-                $('#menuitem').css('opacity','0%');
-                $('#menuitem').hide();
-            }
-        });
-
-        function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-        }
-        async function menuTure() {
-            console.log(187321);
-            $('#menuitem').show();
-            await sleep(10);
-            $('#menuitem').css('opacity','100%');
-        }
-
-        async function menuFalse() {
-            console.log(187321);
-            $('#menuitem').css('opacity','0%');
-            await sleep(100);
-            $('#menuitem').hide();
-        }
-        $(".more").mouseover(
-            function more_txt(){
-                $(".more-txt").css('opacity','0').css('margin-right','20px');
-                $(".more_mis").css('margin-left','135px').css('opacity','1');
-            }
-        ).mouseout(
-            function more_Out() {
-                $(".more-txt").css('opacity','1').css('margin-right','0');
-                $(".more_mis").css('margin-left','50px').css('opacity','0');
-            }
-        );
-        async function changepage() {
-
-            await sleep(1000);
-            $('header').hide();
-            $('main').hide();
-        };
-    </script>
+    <nav>
+        <a href="#" class="nav-a">
+            <i class="material-icons-sharp">library_books</i>
+            <h3>網頁生成器<br>(測試版)</h3>
+        </a>
+        <a href="#" class="nav-a">
+            <i class="material-icons-sharp">art_track</i>
+            <h3>繪畫作品</h3>
+        </a>
+        <a href="#" class="nav-a">
+            <i class="material-icons-sharp">group_add</i>
+            <h3>聯絡</h3>
+        </a>
+        <a href="#" onclick="history.back();" class="nav-a">
+            <i class="material-icons-sharp">exit_to_app</i>
+            <h3>離開</h3>
+        </a>
+    </nav>
+    <!-- <main>
+        <section>
+            <a href="" class="title">
+                第一個文章標題處
+            </a>
+        </section>
+    </main> -->
 </body>
+<script>
+    $(".nav-a").mouseover(
+        function (e) {
+            const dom = e.currentTarget;
+            $(dom).find("h3").css('margin-left','0');
+            $(dom).find("i").css('opacity','.5');
+            // $(dom).css('padding-right','0');
+            $(dom).find("h3").css('opacity','1');
+        }
+    ).mouseout(
+        function (e) {
+            const dom = e.currentTarget;
+            $(dom).find("h3").css('opacity','.0');
+            $(dom).find("i").css('opacity','1');
+            // $(dom).css('padding-right','20px');
+            $(dom).find("h3").css('margin-left','-20px');
+        }
+    )
+</script>
+
 </html>
