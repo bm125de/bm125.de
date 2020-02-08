@@ -63,10 +63,12 @@
             padding-right: 20px;
             margin: 0 6%;
         }
+
         nav .material-icons-sharp {
             font-size: 50px !important;
             transition: .25s;
         }
+
         nav a h3 {
             width: 100%;
             height: 20px;
@@ -78,6 +80,7 @@
             opacity: .0;
             text-align: center;
         }
+
         /* .title {
             font-size: 40px;
         }
@@ -115,9 +118,13 @@
             <h3>繪畫作品</h3>
         </a>
         <a href="#" class="nav-a">
+            <i class="material-icons-sharp">videocam_off</i>
+            <h3>NSFW</h3>
+        </a>
+        <!-- <a href="#" class="nav-a">
             <i class="material-icons-sharp">group_add</i>
             <h3>聯絡</h3>
-        </a>
+        </a> -->
         <a href="#" onclick="history.back();" class="nav-a">
             <i class="material-icons-sharp">exit_to_app</i>
             <h3>離開</h3>
@@ -135,18 +142,18 @@
     $(".nav-a").mouseover(
         function (e) {
             const dom = e.currentTarget;
-            $(dom).find("h3").css('margin-left','0');
-            $(dom).find("i").css('opacity','.5');
+            $(dom).find("h3").css('margin-left', '0');
+            $(dom).find("i").css('opacity', '.5');
             // $(dom).css('padding-right','0');
-            $(dom).find("h3").css('opacity','1');
+            $(dom).find("h3").css('opacity', '1');
         }
     ).mouseout(
         function (e) {
             const dom = e.currentTarget;
-            $(dom).find("h3").css('opacity','.0');
-            $(dom).find("i").css('opacity','1');
+            $(dom).find("h3").css('opacity', '.0');
+            $(dom).find("i").css('opacity', '1');
             // $(dom).css('padding-right','20px');
-            $(dom).find("h3").css('margin-left','-20px');
+            $(dom).find("h3").css('margin-left', '-20px');
         }
     )
 </script>
