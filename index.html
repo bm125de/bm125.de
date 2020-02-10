@@ -4,161 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CheihYu Lin</title>
-    <link
-        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-        rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,200,300,400,500,600,700,800,900');
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif+JP:100,300,400,500,700,900|Noto+Serif+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
+
+        /* font-family: 'Noto Sans TC', sans-serif;
+        font-family: 'Noto Serif TC', serif;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-family: 'Noto Serif JP', serif; */
 
         body {
-            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
             margin: 0;
-            padding: 0 10%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-flow: column;
-            min-width: 1024px;
+            padding-top: 4vh;
+            padding-left: 4vw;
         }
 
-        header {
-            display: none;
-            font-size: 100px;
-            color: white;
-            font-weight: 700;
-            margin: 40px 0;
+        a {
+            text-decoration: transparent;
         }
 
-        .header {
-            margin: 50px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 50vh;
-            background-image: url('header.jpg');
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        nav {
-            margin: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav a {
-            width: 40%;
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            transition: .25s;
-            color: black;
-            text-decoration: none;
-            padding-right: 20px;
-            margin: 0 6%;
-        }
-
-        nav .material-icons-sharp {
-            font-size: 50px !important;
-            transition: .25s;
-        }
-
-        nav a h3 {
-            text-transform: uppercase;
-            width: 100%;
-            height: 20px;
-            font-size: 15px;
+        h3.name {
+            font-size: 20px;
+            font-weight: 900;
             letter-spacing: 5px;
-            margin-top: 5px;
-            margin-left: -20px;
-            transition: .25s;
-            opacity: .0;
-            text-align: center;
+            font-family: 'Noto Sans CT', sans-serif;
+            text-transform: uppercase;
+            color: black;
+            text-decoration: transparent;
+            font-weight: 900;
         }
 
-        /* .title {
-            font-size: 40px;
+        h1.title {
+            font-weight: 900;
+            font-size: 60px;
+            margin: 20px 0;
         }
-        main {
+
+        div.line {
+            border: black 2px solid;
+            width: 80px;
+            margin: 20px 5px;
+        }
+
+        div.project {
             display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
             align-items: flex-start;
-            width: 100%;
+            width: 600px;
+            /* background-color: blue; */
+            text-align: left;
         }
-        main a {
+
+        div.project div.item {
+            text-transform: uppercase;
+            margin: 4px 0;
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        div.project div.item>div {
+            display: flex;
+        }
+
+        div.project div.item div.name::after,
+        div.project div.item div.date::after {
+            text-align: center;
+            width: 20px;
+            content: '/';
+            margin-right: 10px;
+            margin-left: auto;
+            border-bottom: transparent !important;
+        }
+
+        div.project div.item .name {
+            width: 40%;
+        }
+
+        div.project div.item .date {
+            width: 30%;
+        }
+
+        div.project div.item .status {
+            width: 30%;
+        }
+
+        div.project div.item a {
+            text-decoration: transparent;
+            border-bottom: black solid 2px;
             color: black;
-            text-decoration: none;
-            border-bottom: 4px solid black;
-        } */
-        /* @media screen and (max-width: 1024px) {
-            nav {
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-items: center;
-            }
-        } */
+            transition: ease-in-out .15s;
+        }
+
+        div.project div.item a>* {
+            border-bottom: black solid 2px;
+        }
+
+        div.project div.item a:hover {
+            opacity: .5;
+        }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <header>BLOG</header>
-    </div>
-    <nav>
-        <a href="https://git.bm125.de/block-beta/" class="nav-a">
-            <i class="material-icons-sharp">library_books</i>
-            <h3>BLOCK<br>(beta)</h3>
-        </a>
-        <a href="#" class="nav-a">
-            <i class="material-icons-sharp">art_track</i>
-            <h3>ART</h3>
-        </a>
-        <a href="#" class="nav-a">
-            <i class="material-icons-sharp">videocam_off</i>
-            <h3>not safe for work</h3>
-        </a>
-        <!-- <a href="#" class="nav-a">
-            <i class="material-icons-sharp">group_add</i>
-            <h3>聯絡</h3>
-        </a> -->
-        <a href="#" onclick="history.back();" class="nav-a">
-            <i class="material-icons-sharp">exit_to_app</i>
-            <h3>EXIT</h3>
-        </a>
-    </nav>
+    <a href="bm125.de">
+        <h3 class="name">bm125.de</h3>
+    </a>
+    <h1 class="title">選取文案</h1>
+    <div class="line"></div>
 
-    <!-- <main>
-        <section>
-            <a href="" class="title">
-                第一個文章標題處
-            </a>
-        </section>
-    </main> -->
+    <div class="project">
+        <div class="item">
+            <div class="name">
+                名稱
+                <i class="material-icons">
+                    arrow_drop_down
+                </i>
+            </div>
+            <div class="date">
+                建立日期
+                <i class="material-icons">
+                    arrow_drop_up
+                </i>
+            </div>
+            <div class="status">
+                狀態
+                <i class="material-icons">
+                    arrow_drop_down
+                </i>
+            </div>
+        </div>
+        <!-- 項目 -->
+        <div class="item">
+            <div class="name">
+                <a href="">網頁生成套件</a>
+            </div>
+            <div class="date">
+                <a href="">20.01.22</a>
+            </div>
+            <div class="status">啟用</div>
+        </div>
+        <!-- 項目 -->
+        <div class="item">
+            <div class="name">
+                <a href="" onclick="alert('在本人畢業前暫不開放！ \n 若想要獲得進一步的網址資訊，請群洽本人並等待同意。');">獸人索爾的部落格</a>
+            </div>
+            <div class="date">
+                <a href="">20.02.08</a>
+            </div>
+            <div class="status">啟用</div>
+        </div>
+    </div>
+
 </body>
-<script>
-    $(".nav-a").mouseover(
-        function (e) {
-            const dom = e.currentTarget;
-            $(dom).find("h3").css('margin-left', '0');
-            $(dom).find("i").css('opacity', '.5');
-            // $(dom).css('padding-right','0');
-            $(dom).find("h3").css('opacity', '1');
-        }
-    ).mouseout(
-        function (e) {
-            const dom = e.currentTarget;
-            $(dom).find("h3").css('opacity', '.0');
-            $(dom).find("i").css('opacity', '1');
-            // $(dom).css('padding-right','20px');
-            $(dom).find("h3").css('margin-left', '-20px');
-        }
-    )
-</script>
 
 </html>
