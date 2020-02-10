@@ -57,7 +57,7 @@
   "replacement_web_app": ...,
   "requirements": {...},
   "sandbox": [...],
-  "short_name": "Short Name",
+  "short_name": "BM125",
   "signature": ...,
   "sockets": {
     "tcp": {
@@ -67,15 +67,15 @@
       "send": "*"
     }
   },
-  "storage": {
-    "managed_schema": "schema.json"
-  },
+//   "storage": {
+//     "managed_schema": "schema.json"
+//   },
   "system_indicator": ...,
   "update_url": "http://path/to/updateInfo.xml",
   "url_handlers": {...},
   "usb_printers": {
     "filters": [...]
   },
-  "version_name": "aString",
+  "version_name": "20.125",
   "webview": {...}
 }
