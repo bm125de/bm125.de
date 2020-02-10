@@ -26,9 +26,9 @@
         {
             "platform": "web"
         },
-        {
-            "platform": "play",
-            "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-        }
+        // {
+        //     "platform": "play",
+        //     "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+        // }
     ]
 }
