@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif+JP:100,300,400,500,700,900|Noto+Serif+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
+
+        /* font-family: 'Noto Sans TC', sans-serif;
+        font-family: 'Noto Serif TC', serif;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-family: 'Noto Serif JP', serif; */
+
+        body {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0;
+            padding-top: 4vh;
+            padding-left: 4vw;
+        }
+
+        a {
+            text-decoration: transparent;
+        }
+
+        h3.name {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 5px;
+            font-family: 'Noto Sans CT', sans-serif;
+            text-transform: uppercase;
+            color: black;
+            text-decoration: transparent;
+            font-weight: 900;
+        }
+
+        h1.title {
+            font-weight: 900;
+            font-size: 60px;
+            margin: 20px 0;
+        }
+
+        div.line {
+            border: black 2px solid;
+            width: 80px;
+            margin: 20px 5px;
+        }
+
+        div.project {
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 600px;
+            /* background-color: blue; */
+            text-align: left;
+        }
+
+        div.project div.item {
+            text-transform: uppercase;
+            margin: 4px 0;
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        div.project div.item>div {
+            display: flex;
+        }
+
+        div.project div.item div.name::after,
+        div.project div.item div.date::after {
+            text-align: center;
+            width: 20px;
+            content: '/';
+            margin-right: 10px;
+            margin-left: auto;
+            border-bottom: transparent !important;
+        }
+
+        div.project div.item .name {
+            width: 40%;
+        }
+
+        div.project div.item .date {
+            width: 30%;
+        }
+
+        div.project div.item .status {
+            width: 30%;
+        }
+
+        div.project div.item a {
+            text-decoration: transparent;
+            border-bottom: black solid 2px;
+            color: black;
+            transition: ease-in-out .15s;
+        }
+
+        div.project div.item a>* {
+            border-bottom: black solid 2px;
+        }
+
+        div.project div.item a:hover {
+            opacity: .5;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="bm125.de">
+        <h3 class="name">bm125.de</h3>
+    </a>
+    <h1 class="title">選取文案</h1>
+    <div class="line"></div>
+
+    <div class="project">
+        <div class="item">
+            <div class="name">
+                名稱
+                <i class="material-icons">
+                    arrow_drop_down
+                </i>
+            </div>
+            <div class="date">
+                建立日期
+                <i class="material-icons">
+                    arrow_drop_up
+                </i>
+            </div>
+            <div class="status">
+                狀態
+                <i class="material-icons">
+                    arrow_drop_down
+                </i>
+            </div>
+        </div>
+        <!-- 項目 -->
+        <div class="item">
+            <div class="name">
+                <a href="index_.hmtl" onclick="alert('舊版的網頁連結已不支援！');">新版首頁</a>
+            </div>
+            <div class="date">
+                <a href="">20.02.08</a>
+            </div>
+            <div class="status">啟用</div>
+        </div>
+        <!-- 項目 -->
+        <div class="item">
+            <div class="name">
+                <a href="" onclick="alert('在本人畢業前暫不開放！ \n 若想要獲得進一步的網址資訊，請群洽本人並等待同意。');">獸人索爾的部落格</a>
+            </div>
+            <div class="date">
+                <a href="">20.02.08</a>
+            </div>
+            <div class="status">啟用</div>
+        </div>
+        <!-- 項目 -->
+        <div class="item">
+            <div class="name">
+                <a href="">網頁生成套件</a>
+            </div>
+            <div class="date">
+                <a href="">20.01.22</a>
+            </div>
+            <div class="status">啟用</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
