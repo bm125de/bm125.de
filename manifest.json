@@ -1,7 +1,7 @@
 {
     "name": "BM125  (測試版)",
     "short_name": "BM測試",
-    "start_url": "?index",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#fff",
     "description": "A simply readable Hacker News app!",
