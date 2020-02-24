@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+@import url('profile.css');
+:root {
+    --user_color: rgb(19, 49, 214);
+    --background_color: rgb(22, 22, 24);
+}
+
+::selection {
+    background-color: var(--user_color);
+    color: white;
+}
+
+body {
+    background-color: #ffffff;
+    /* height: 1000vh; */
+    font-family: 'Noto Sans TC';
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}

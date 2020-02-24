@@ -1,0 +1,35 @@
+footer {
+    overflow: hidden;
+    padding: 10px 15%;
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+footer .logo {
+    height: 100%;
+    width: 100%;
+}
+
+footer .list {
+    height: 100%;
+    width: 100%;
+}
+
+footer .list ul {
+    font-weight: 900;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+footer .list ul li {
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    cursor: default;
+}

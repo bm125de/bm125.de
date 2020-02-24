@@ -1,0 +1,44 @@
+@import url('profile.header.css');
+@import url('profile.main.css');
+@import url('profile.footer.css');
+@media screen and (max-width:1300px) {
+    .profile-card {
+        display: none;
+    }
+    header .profile-info {
+        width: 100%;
+    }
+    main .post {
+        margin: 0 5vw;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    header {
+        flex-direction: column;
+    }
+    header .profile-images {
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    main .post {
+        flex-flow: column;
+    }
+    main .post .img {
+        width: 100%;
+        border-radius: 0;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    main .post {
+        margin: 0;
+        margin-bottom: 40px;
+    }
+}
+
+body {
+    background-color: var(--background_color) !important;
+}
