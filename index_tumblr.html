@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheihYu's Profile</title>
+    <link rel="stylesheet" href="https://bm125.de/style.css">
+    <link rel="shortcut icon" href="r6s-operator-badge-oryx.webp" type="image/webp">
+    <style>
+        .tumblr_theme_marker_blogtitle {
+            letter-spacing: 3px !important;
+            font-weight: 900 !important;
+            font-size: 60px !important;
+            color: white !important;
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header style="background-image: url('{HeaderImage}');">
+        <div class="profile-images">
+            <img src="{PortraitURL-128}" alt="">
+        </div>
+        <div class="profile-info">
+            <h1>{Title}</h1>
+            <span class="level">{CopyrightYears} ． WRITEER</span>
+            <p>{block:Description}{Description}{/block:Description}</p>
+            <a href="#post" style="margin-left: 0;">READ MORE</a>
+            <a href="https://git.bm125.de" class="edit">EDIT</a>
+        </div>
+        <div class="profile-card">
+            <h3>achievement</h3>
+            <div class="sub">
+                <img src="https://discordemoji.com/assets/emoji/9148_Shaxx_Amazing.png" alt="">
+                <div class="text">
+                    <h2>DESTINY</h2>
+                    <p>Got a new spirti</p>
+                </div>
+            </div>
+            <div class="sub"></div>
+            <div class="sub"></div>
+        </div>
+        <div class="profiles-background"></div>
+    </header>
+    <main id="post">
+        {block:IndexPage} {block:Posts}
+        <!-- <section class="title">
+            <h2>cheihyu's POST</h2>
+        </section>
+        <section class="post">
+            <div class="img" style="background-image: url('註解 2020-02-24 225808.jpg');">
+                <img src="" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    <h6 class="tag">Division 2</h6>
+                </div>
+                <h2>Division 2 Warlords of New York DLC</h2>
+                <p>官方網站。在《全境封鎖2》的全新資料片「紐約軍閥」中，探索曼哈頓下城並獵捕前國土戰略局特工，亞倫．基納。2020 年3 月3 日推出。</p>
+                <a href="#">READ MORE</a>
+            </div>
+        </section> -->
+        {block:Photo}
+        <section class="post">
+            <div class="img" style="background-image: url('{PhotoURL-HighRes}');">
+                <img src="" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    {block:Tags}
+                    <h6 class="tag">{Tag}</h6>{/block:Tags}
+                </div>
+                <!-- {block:PostSummary}<h2>{PostSummary}</h2>{/block:PostSummary} -->
+                <p>{Caption}</p>
+                <a href="{Permalink}">READ MORE</a>
+            </div>
+        </section>{/block:Photo}
+        <!-- <section class="post">
+            <div class="img" style="background-image: url('');">
+                <img src="" alt="">
+            </div>
+            <div class="text">
+                <div class="name">
+                    <h6 class="tag">Disney+</h6>
+                </div>
+                <h2>The Mandalorian - Wikipedia</h2>
+                <p>《曼達洛人》（英語：The Mandalorian）是一部美國太空歌劇網路電視劇，其題材取自喬治·盧卡斯所創作的《星際大戰》。故事發生在《星際大戰六部曲：絕地大反攻》事件五 ...</p>
+                <a href="#">READ MORE</a>
+            </div>
+        </section> -->
+        {/block:Posts} {/block:IndexPage} {block:PermalinkPage} {block:Posts} {/block:Posts} {/block:PermalinkPage}
+
+    </main>
+
+    <section class="home">
+        111
+    </section>
+
+    <section class="media-block">
+        <line></line>
+        <h2>MEDIA</h2>
+        <div class="media">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+    </section>
+    <!-- <line class="f"></line> -->
+    <footer>
+        <a href="#top">CheihYu Lin © Copyright 2020</a>
+        <!-- <div class="logo">
+            <h1>lllll</h1>
+        </div>
+        <div class="list">
+            <ul>
+                <h1>pages</h1>
+                <li>home</li>
+                <li>about</li>
+                <li>cll</li>
+            </ul>
+        </div> -->
+    </footer>
+</body>
+
+</html>
