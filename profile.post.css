@@ -22,8 +22,12 @@ body.post main .art {
     height: 100%;
     width: 100%;
     margin: 40px 0;
-    padding: 20px 40px;
+    padding: 100px;
     min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 body.post main .art h1 {
@@ -44,13 +48,30 @@ body.post main .art h2 {
 body.post main .art h3 {
     font-weight: 900;
     text-transform: uppercase;
-    margin: 20px 0;
+    margin: 10px 0;
+}
+
+body.post main .art img {
+    display: block;
+    width: 90%;
+    margin: 40px 0;
+    height: auto;
+    border-radius: 10px;
+}
+
+body.post main .art img.icon {
+    display: block;
+    width: 100px;
+    margin: 10px 0;
+    height: auto;
+    /* border-radius: 10px; */
 }
 
 body.post main .post-title {
     display: flex;
     align-items: center;
     width: 100%;
+    text-transform: uppercase;
 }
 
 body.post main .post-title .material-icons {
