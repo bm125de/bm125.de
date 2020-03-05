@@ -1,0 +1,66 @@
+body.post {
+    /* background-position: center; */
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    backdrop-filter: blur(20px);
+    background-image: var(--background_images);
+}
+
+body.post main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    background-color: var(--background_color_filter);
+}
+
+body.post main .art {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px 40px;
+    min-height: 70vh;
+}
+
+body.post main .art h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin: 20px 0;
+}
+
+body.post main .art h2 {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+body.post main .art h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+body.post main .post-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+body.post main .post-title .material-icons {
+    margin-right: 20px;
+}
+
+.post-title a i.material-icons {
+    color: white;
+}
+
+.post-title h1 {
+    color: white;
+}
